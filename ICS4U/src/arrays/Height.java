@@ -50,7 +50,10 @@ public class Height extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
 	public Height() {
+		
+		// create gui
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 270, 266);
 		contentPane = new JPanel();
@@ -116,6 +119,7 @@ public class Height extends JFrame {
 		lblTheBiggestNumber.setBounds(12, 207, 247, 15);
 		contentPane.add(lblTheBiggestNumber);
 		
+		// create actionlistener for submit button
 		JButton btnCalculate = new JButton("Calculate");
 		btnCalculate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -126,6 +130,7 @@ public class Height extends JFrame {
 		contentPane.add(btnCalculate);
 	}
 
+	// put the textfield numbers in an array
 	private void calculate() {
 		
 
@@ -142,11 +147,13 @@ public class Height extends JFrame {
 		
 		double biggest = 0;
 		
+		// find the biggest number
 		for (double i : list) {
 			if (i > biggest) {
 				biggest = i;
 			}
 		}
+		// tell the user what the biggest number is
 		lblTheBiggestNumber.setText("The biggest number is: " + biggest + "cm");
 	}
 	
