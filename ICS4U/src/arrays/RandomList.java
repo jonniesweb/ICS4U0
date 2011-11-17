@@ -26,8 +26,8 @@ class RandomList {
 			}
 		}
 		System.out.println("");
-		System.out.println("Zeroes: " + getZeroes(list, 0));
-		System.out.println("Sevens: " + getZeroes(list, 7));
+		System.out.println("Zeroes: " + getNumOfNum(list, 0));
+		System.out.println("Sevens: " + getNumOfNum(list, 7));
 		System.out.println("Average: " + getAverage(list));
 		System.out.println("Even: " + getEvenOdd(list, true));
 		System.out.println("Odd: " + getEvenOdd(list, false));
@@ -37,6 +37,7 @@ class RandomList {
 
 	}
 
+	// method to get number of even or odd numbers
 	private static int getEvenOdd(int[] list2, boolean isEven) {
 
 		int counter = 0;
@@ -56,6 +57,7 @@ class RandomList {
 
 	}
 
+	// method to get the average from a list
 	private static double getAverage(int[] list2) {
 
 		double average = 0;
@@ -70,7 +72,8 @@ class RandomList {
 
 	}
 
-	private static int getZeroes(int[] list2, int number) {
+	// method to return the number of numbers in a list from a number that you choose
+	private static int getNumOfNum(int[] list2, int number) {
 
 		int counter = 0;
 
